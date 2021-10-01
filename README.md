@@ -114,12 +114,11 @@ import ReactDOM from "react-dom"
 
 const App = () => <div>hello word</div>
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<App/>, document.getElementById("root"))
 ```
 
 8. Run.
 
-for development.
 ```sh
 $ npm start
 ```
