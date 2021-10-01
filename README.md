@@ -5,31 +5,31 @@ https://qiita.com/abouch/items/820588d1f334c79926ca
 
 ## Getting Started
 
-1. Initialize npm project.
+1. Setup npm project.
 
 ```sh
 $ npm init -y
 ```
 
-2. Setup TypeScript.
+2. Install TypeScript.
 
 ```sh
 $ npm install --save-dev typescript
 ```
 
-3. Initialize TypeScript.
+3. Setup TypeScript.
 
 ```sh
 $ npx tsc --init
 ```
 
-4. Setup Webpack.
+4. Install Webpack.
 
 ```sh
 $ npm install --save-dev webpack webpack-cli webpack-dev-server ts-loader
 ```
 
-5. Initialize Webpack.
+5. Setup Webpack.
 
 tsconfig.json (https://webpack.js.org/guides/typescript/)
 ```json
@@ -73,13 +73,23 @@ module.exports = {
 }
 ```
 
-6. Setup React.
+package.json
+```json
+{
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  }
+}
+```
+
+6. Install React.
 
 ```sh
 $ npm install --save-dev react react-dom @types/react @types/react-dom
 ```
 
-7. Initialize React.
+7. Setup React.
 
 dist/index.html
 ```html
@@ -98,7 +108,7 @@ dist/index.html
 ```
 
 src/index.tsx
-```ts
+```tsx
 import React from "react"
 import ReactDOM from "react-dom"
 
@@ -107,14 +117,9 @@ const App = () => <div>hello word</div>
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
 
-8. Run Locally.
+8. Run.
 
+for development.
 ```sh
-$ npx webpack-dev-server
-```
-
-9. Build for Production.
-
-```sh
-$ npx webpack --mode=production
+$ npm start
 ```
